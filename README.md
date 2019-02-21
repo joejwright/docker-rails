@@ -12,7 +12,7 @@ This repository contains a Dockerfile of Ruby, nodejs and npm for Docker's autom
 
 2. Download [automated build](https://registry.hub.docker.com/u/mwallasch/docker-ruby-node/) from public [Docker Hub Registry](https://registry.hub.docker.com/): `docker pull joejwright/docker-ruby-node`
 
-   (alternatively, you can build an image from Dockerfile: `docker build -t="joejwright/docker-ruby-node" github.com/joejwright/docker-ruby-node`)
+   (alternatively, you can build an image from Dockerfile: `docker build -t="joejwright/docker-rails" github.com/joejwright/docker-rails`)
 
 
 ### Usage
