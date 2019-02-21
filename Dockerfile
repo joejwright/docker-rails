@@ -1,4 +1,4 @@
-FROM ruby:2.3.8
+FROM ruby:2.5.3
 MAINTAINER Joe Wright <joe@noven.tech>
 ENV REFRESHED_AT 2019-02.21
 

@@ -3,11 +3,13 @@
 This repository contains a Dockerfile of Ruby, nodejs and npm for Docker's automated build published to the public Docker Hub Registry.
 
 ## What's included
-- Ruby 2.3.8
-- Nodejs (latest)
+
+- Ruby 2.5.3
+- Nodejs 11.x
 - npm
 
 ### Installation
+
 1. Install [Docker](https://www.docker.com/).
 
 2. Download [automated build](https://registry.hub.docker.com/u/mwallasch/docker-ruby-node/) from public [Docker Hub Registry](https://registry.hub.docker.com/): `docker pull joejwright/docker-ruby-node`
@@ -17,12 +19,16 @@ This repository contains a Dockerfile of Ruby, nodejs and npm for Docker's autom
 
 ### Usage
 
-    docker run -it --rm joejwright/docker-ruby-node
+    docker run -it --rm joejwright/docker-rails
 
 #### Run `ruby`
 
-    docker run -it --rm joejwright/docker-ruby-node ruby
+    docker run -it --rm joejwright/docker-rails ruby
 
 #### Run `node`
 
-    docker run -it --rm joejwright/docker-ruby-node node
+    docker run -it --rm joejwright/docker-rails node
+
+#### Run `bash`
+
+    docker run -it --rm joejwright/docker-rails bash
