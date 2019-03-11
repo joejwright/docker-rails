@@ -1,6 +1,6 @@
 FROM ruby:2.5.3
 MAINTAINER Joe Wright <joe@noven.tech>
-ENV REFRESHED_AT 2019-02.21
+ENV REFRESHED_AT 2019-03.11
 
 RUN apt-get update -qq && apt-get install -y build-essential
 
@@ -25,6 +25,14 @@ RUN \
   && apt-get install curl gnupg -yq \
   && curl -sL https://deb.nodesource.com/setup_11.x | bash \
   && apt-get install nodejs -yq
+
+# install freetds
+RUN wget ftp://ftp.freetds.org/pub/freetds/stable/freetds-1.00.27.tar.gz && \
+  tar -xzf freetds-1.00.27.tar.gz && \
+  cd freetds-1.00.27 && \
+  ./configure --prefix=/usr/local --with-tdsver=7.3 && \
+  make && \
+  make install
 
 WORKDIR /app
 ONBUILD ADD . /app
