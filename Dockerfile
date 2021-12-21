@@ -34,6 +34,9 @@ RUN wget ftp://ftp.freetds.org/pub/freetds/stable/freetds-1.00.27.tar.gz && \
   make && \
   make install
 
+# update bundler
+RUN gem install bundler
+
 WORKDIR /app
 ONBUILD ADD . /app
 
